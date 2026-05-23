@@ -1,0 +1,439 @@
+/* GLOBAL */
+
+body{
+background:linear-gradient(135deg,#eef4ff,#f9fbff);
+font-family:'Segoe UI',sans-serif;
+margin:0;
+}
+
+/* DASHBOARD LAYOUT */
+
+.dashboard{
+padding:50px;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+margin-bottom:40px;
+}
+
+.title{
+font-size:44px;
+font-weight:800;
+
+background:linear-gradient(90deg,#0077ff,#00c9a7);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+letter-spacing:.5px;
+}
+
+/* DEVICE STATUS */
+
+.device-status{
+margin-top:10px;
+font-size:14px;
+color:#6b7a8c;
+}
+
+/* HEALTH CARDS */
+
+.health-card{
+
+border-radius:20px;
+
+background:rgba(255,255,255,.65);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.08);
+
+transition:all .35s ease;
+
+padding:20px;
+
+}
+
+.health-card:hover{
+
+transform:translateY(-8px) scale(1.02);
+
+box-shadow:
+0 0 20px rgba(0,123,255,.35),
+0 25px 45px rgba(0,0,0,.18);
+
+}
+
+/* ICON */
+
+.icon{
+
+font-size:38px;
+margin-bottom:12px;
+
+}
+
+/* PARAMETER NAME */
+
+.parameter{
+
+color:#7a8899;
+font-size:14px;
+letter-spacing:.3px;
+
+}
+
+/* VALUE */
+
+.value{
+
+font-size:32px;
+font-weight:700;
+color:#1a2b45;
+
+}
+
+/* AI HEALTH SCORE */
+
+.health-score{
+
+background:linear-gradient(145deg,#1e2b3a,#27394c);
+
+color:white;
+
+padding:30px;
+
+border-radius:22px;
+
+text-align:center;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.3);
+
+}
+
+.health-score h2{
+font-size:48px;
+margin-top:10px;
+}
+
+/* TREND PANEL */
+
+.trend-panel{
+
+background:white;
+
+padding:25px;
+
+border-radius:22px;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.trend-panel h4{
+
+font-weight:600;
+
+margin-bottom:20px;
+
+color:#2c3e50;
+
+}
+
+.trend-chart{
+height:260px;
+}
+
+/* TREND MONITOR GRID */
+
+.trend-monitor{
+
+position:relative;
+
+height:300px;
+
+background:
+
+linear-gradient(rgba(0,255,166,.06) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,166,.06) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+border-radius:15px;
+
+padding:10px;
+
+overflow:hidden;
+
+}
+/* ALERT ZONES */
+
+.trend-monitor::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+
+linear-gradient(
+to top,
+rgba(255,0,0,.05) 0%,
+rgba(255,0,0,.05) 20%,
+transparent 20%,
+transparent 80%,
+rgba(255,165,0,.05) 80%,
+rgba(255,165,0,.05) 100%
+);
+
+pointer-events:none;
+
+}
+/* GLOW EFFECT FOR TREND LINES */
+
+.trend-monitor canvas{
+
+filter:
+drop-shadow(0 0 4px rgba(0,255,166,.4))
+drop-shadow(0 0 8px rgba(0,255,166,.3));
+
+}
+/* ECG PANEL */
+
+.ecg-panel{
+
+position:relative;
+
+background:#020617;
+
+border-radius:22px;
+
+padding:25px;
+
+margin-top:50px;
+
+box-shadow:
+0 20px 45px rgba(0,0,0,.25);
+
+/* ECG GRID */
+
+background-image:
+
+linear-gradient(rgba(0,255,166,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,166,0.05) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+overflow:hidden;
+
+}
+
+
+/* ECG TITLE */
+
+.ecg-title{
+
+color:#00ffa6;
+
+text-align:center;
+
+font-size:20px;
+
+margin-bottom:20px;
+
+letter-spacing:.5px;
+
+}
+
+/* ECG CHART HEIGHT */
+
+.ecg-chart canvas{
+
+filter:
+drop-shadow(0 0 6px #00ffa6)
+drop-shadow(0 0 10px #00ffa6)
+drop-shadow(0 0 18px #00ffa6);
+
+}
+/* ECG GRID MOVEMENT */
+
+.ecg-panel::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:200%;
+height:200%;
+
+background-image:
+
+linear-gradient(rgba(0,255,166,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,166,0.05) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+animation:ecgGridMove 12s linear infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes ecgGridMove{
+
+0%{
+transform:translate(0,0);
+}
+
+100%{
+transform:translate(-40px,-40px);
+}
+
+}
+
+/* FLOATING MEDICAL ICONS */
+
+.floating-icons{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+/* FLOATING ICON STYLE */
+
+.icon-float{
+
+position:absolute;
+
+width:120px;
+
+opacity:.08;
+
+animation:floatIcon 18s linear infinite;
+
+}
+
+/* ICON POSITIONS */
+
+.ecg-icon{
+left:10%;
+top:75%;
+animation-delay:0s;
+}
+
+.cross-icon{
+left:55%;
+top:85%;
+animation-delay:4s;
+}
+
+.stetho-icon{
+left:80%;
+top:60%;
+animation-delay:8s;
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes floatIcon{
+
+0%{
+transform:translateY(100vh) rotate(0deg);
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg);
+}
+
+}
+
+/* HEADER ECG LINE */
+
+.ecg-header-container{
+
+width:100%;
+height:60px;
+
+overflow:hidden;
+
+margin-top:10px;
+
+}
+
+/* ECG HEADER */
+
+.ecg-header{
+
+width:200%;
+
+height:60px;
+
+animation:ecgScroll 4s linear infinite;
+
+filter:
+drop-shadow(0 0 6px #00ffa6)
+drop-shadow(0 0 12px #00ffa6)
+drop-shadow(0 0 18px #00ffa6);
+
+}
+
+/* ECG SCROLL */
+
+@keyframes ecgScroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+/* GRID LAYOUT FOR CARDS */
+
+.cards-grid{
+
+margin-top:30px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.dashboard{
+padding:25px;
+}
+
+.title{
+font-size:34px;
+}
+
+}

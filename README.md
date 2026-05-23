@@ -173,8 +173,8 @@ Jumper wires + power supply
 ### 1. Clone the repository
 
 ```bash
-git clone git@github.com:MOHAMMADIKRAM03/-Smart-Healthcare-Monitoring-System-.git
-cd -Smart-Healthcare-Monitoring-System-
+git clone git@github.com:Vishnu8305/Smart-Healthcare-Monitoring-System.git 
+cd Smart-Healthcare-Monitoring-System
 ```
 
 ### 2. Install required libraries

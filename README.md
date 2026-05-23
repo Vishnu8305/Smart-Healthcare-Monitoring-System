@@ -389,11 +389,11 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-**Mohammad Ikram**
+**Pedaballi Vishnu Vardhan Reddy**
 
 *IoT Developer · Embedded Systems Enthusiast*
 
-[![GitHub](https://img.shields.io/badge/GitHub-MOHAMMADIKRAM03-181717?style=for-the-badge&logo=github)](https://github.com/MOHAMMADIKRAM03)
+[![GitHub](https://img.shields.io/badge/GitHub-Vishnu8305-181717?style=for-the-badge&logo=github)](https://github.com/Vishnu8305)
 
 </div>
 
